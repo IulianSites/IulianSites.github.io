@@ -139,7 +139,7 @@ body {
 }
 
 #TopSection {
-  width: 97vw;
+  width: 97.5vw;
   height: 1cm;
   overflow-y: hidden;
   background-color: #333;
@@ -147,7 +147,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 3vw;
+  padding-right: 2.5vw;
 }
 
 .languageButton {
