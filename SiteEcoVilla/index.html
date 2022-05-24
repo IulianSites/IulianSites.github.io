@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Site</title>
+    <meta name="description" content="Site Apartamente" />
+    <link rel="stylesheet" href="SiteStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <script src="SiteScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body onload="showAllCurrent()">
+    <div id="mainPage">
+      <img id="backgroundImage" src="Images/MainBackground.jpg" ; />
+      <div id="pageHeaderBox">
+        <div id="pageTitleBackground">
+          <div id="pageTitleBox">
+            <div id="pageTitle">Eco-Villa</div>
+            <div id="pageSubtitle">Premium living</div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="TopSection">
+        </div>
+        <div id="section1" class="section">
+          <div class="text_box_formal" id="textBox1">
+            Complexul locativ Eco-Villa este un nou proiect eco Premium de case,
+            dezvoltat după un concept unic, care o să vă cucerească de la prima
+            vedere. Amplasat în suburbia Chișinăului – or.Codru, acest complex
+            locativ este destinat celor care tind să rămână conectați la viața
+            orașului și în același timp să savureze din plin panorama
+            Chişinăului și a or. Codru.
+          </div>
+        </div>
+        <div id="section3" class="section">
+          <div id="slideshowAndText">
+            <div class="text_box_casual" id="textBox3">
+              Ansamblu de 21 de case - cartier eco cu infrastructură dezvoltată,
+              acces la transport și la oportunitățile vieții urbane. Datorită
+              arhitecturii moderne și a designului individual, casele proiectate
+              sunt visul celor care au nevoie de liniște și confort sporit.
+            </div>
+            <div class="slideshow_box" id="slideshowBox1">
+              <div class="slides_box">
+                <img class="slide" src="Images/Image1.jpg" />
+                <img class="slide" src="Images/Image2.jpg" />
+                <img class="slide" src="Images/Image3.jpg" />
+                <img class="slide" src="Images/Image4.jpg" />
+                <img class="slide" src="Images/Image5.jpg" />
+                <img class="slide" src="Images/Image6.jpg" />
+              </div>
+              <a class="prev_slide" onclick="plusSlides(-1, 1)">❮</a>
+              <a class="oc_slideshow_button" onclick="OpenSlideshowWindow(1)"
+                ><div class="plus_character">+</div></a
+              >
+              <a class="next_slide" onclick="plusSlides(1, 1)">❯</a>
+            </div>
+          </div>
+        </div>
+        <div id="section6" class="section">
+          <div class="text_box_formal" id="textBox5">
+            Costul unui metru pătrat în complexul locativ Eco-Villa este de 1150
+            de Euro pentru un mp (varianta albă), care poate fi negociat
+            individual în dependență de cerințele Beneficiarului. Darea în
+            exploatare a complexului este programată pentru semestrul IV anul
+            2022. Alege să locuiești într-o casă care a adus conceptul de
+            confort la alt nivel, în mun. Chișinău.
+          </div>
+        </div>
+        <div class="section_break"></div>
+        <div id="section4" class="section">
+          <div class="text_box_casual">
+            <div class="title">Plan general</div>
+          </div>
+          <div class="image_box">
+            <a href="Images/PlanGeneral.jpg" target="_blank">
+              <img src="Images/PlanGeneral.jpg" />
+            </a>
+          </div>
+        </div>
+        <div class="section_break"></div>
+        <div id="section5" class="section">
+          <div class="text_box_casual">
+            <div class="title">Locatie</div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.9577293940383!2d28.809895215573015!3d46.98216487914819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97ee7dda1c727%3A0x628137219d505692!2sStrada%20Cobzarilor%2098%2C%20Codru%2C%20Moldova!5e0!3m2!1sen!2s!4v1653325831142!5m2!1sen!2s"
+            class="iFrame_type_1"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          ></iframe>
+        </div>
+        <div id="BottomSection" class="section">
+          <div id="contacts">
+            <div class="title">Contacte</div>
+            Adresa: Mun.Chisinau, Strada Cobzarilor 98 <br />
+            Telefon: +373 60 265 659 <br />
+            E-mail: website_Prototype@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="slideshowWindow">
+      <div class="slideshow_box" id="slideshowBox0">
+        <a class="prev_slide" onclick="plusSlides(-1, 0)">❮</a>
+        <a class="oc_slideshow_button" onclick="CloseSlideshowWindow()"
+          ><div>+</div></a
+        >
+        <a class="next_slide" onclick="plusSlides(1, 0)">❯</a>
+      </div>
+    </div>
+  </body>
+</html>
