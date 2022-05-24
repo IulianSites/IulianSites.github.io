@@ -1,4 +1,4 @@
-let slideIndex = [1, 1];
+let slideIndex = [1, 1, 1];
 
 function showAllCurrent() {
   let i;
@@ -89,4 +89,18 @@ function CloseSlideshowWindow() {
     .getElementsByClassName("slides_box")[0];
   slides_box.remove();
   slideshowWindow.style.display = "none";
+}
+
+function DataCountdown() {
+  let today = new Date();
+  let nrMonths = 9 - (today.getMonth() + 1);
+  let nrYears = 2023 - today.getFullYear();
+  if (nrMonths < 0) {
+    nrYears -= 1;
+    nrMonths += 12;
+  }
+  let months = document.getElementById("months");
+  let years = document.getElementById("years");
+  months.textContent = nrMonths;
+  years.textContent = nrYears;
 }
