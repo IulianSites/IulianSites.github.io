@@ -53,7 +53,7 @@ body {
 #pageTitle {
   color: #fff;
   font-family: Verdana;
-  font-size: calc(1cm + 2.5vw);
+  font-size: calc(1.4cm + 1.5vw);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -61,7 +61,7 @@ body {
 #pageSubtitle {
   color: #fff;
   font-family: Verdana;
-  font-size: calc(0.35cm + 0.9vw);
+  font-size: calc(0.5cm + 0.5vw);
   font-weight: 600;
   letter-spacing: 0.01em;
 }
