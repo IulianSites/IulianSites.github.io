@@ -67,11 +67,11 @@
         <div id="section6" class="section">
           <div class="text_box_formal" id="textBox5">
             Costul unui metru pătrat în complexul locativ Eco-Villa este de 850
-            de Euro (varianta albă), care poate fi
-            negociat individual în dependență de cerințele Beneficiarului. Darea
-            în exploatare a complexului este programată pentru semestrul IV anul
-            2023. Alege să locuiești într-o casă care a adus conceptul de
-            confort la alt nivel, în mun. Chișinău.
+            de Euro (varianta albă), care poate fi negociat individual în
+            dependență de cerințele Beneficiarului. Darea în exploatare a
+            complexului este programată pentru semestrul IV anul 2023. Alege să
+            locuiești într-o casă care a adus conceptul de confort la alt nivel,
+            în mun. Chișinău.
           </div>
         </div>
         <div id="section2" class="section">
@@ -115,8 +115,8 @@
         </div>
         <div id="section7" class="section">
           <div id="dataCountdown">
-            Au mai rămas <span id="years"></span> ani și
-            <span id="months"></span> luni până la darea în exploatare
+            A mai rămas <span id="years"></span> și
+            <span id="months"></span> până la darea în exploatare
           </div>
         </div>
         <div id="BottomSection" class="section">
@@ -138,5 +138,28 @@
         <a class="next_slide" onclick="plusSlides(1, 0)">❯</a>
       </div>
     </div>
+    <script>
+      function DataCountdown() {
+        let today = new Date();
+        let nrMonths = 9 - (today.getMonth() + 1);
+        let nrYears = 2023 - today.getFullYear();
+        if (nrMonths < 0) {
+          nrYears -= 1;
+          nrMonths += 12;
+        }
+        let months = document.getElementById("months");
+        let years = document.getElementById("years");
+        if (nrMonths == 1) {
+          months.textContent = "1 luna";
+        } else {
+          months.textContent = nrMonths + " luni";
+        }
+        if (nrYears == 1) {
+          years.textContent = "1 an";
+        } else {
+          years.textContent = nrYears + " ani";
+        }
+      }
+    </script>
   </body>
 </html>

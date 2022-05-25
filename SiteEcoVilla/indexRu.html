@@ -116,16 +116,16 @@
         </div>
         <div id="section7" class="section">
           <div id="dataCountdown">
-            осталось <span id="years"></span> лет и
-            <span id="months"></span> месяца до ввода в эксплуатацию.
+            осталось <span id="years"></span> и
+            <span id="months"></span> до ввода в эксплуатацию.
           </div>
         </div>
         <div id="BottomSection" class="section">
           <div id="contacts">
-            <div class="title">Contacte</div>
-            Adresa: Mun.Chisinau, Strada Cobzarilor 98 <br />
-            Telefon: +373 78 454 444 <br />
-            E-mail: Ecovilacodru@gmail.com
+            <div class="title">контакты</div>
+            Адрес: Мун.Chisinau, улица Кобзарилор 98 <br />
+            Телефон: +373 78 454 444 <br />
+            Эл. почта: Ecovilacodru@gmail.com
           </div>
         </div>
       </div>
@@ -139,5 +139,28 @@
         <a class="next_slide" onclick="plusSlides(1, 0)">❯</a>
       </div>
     </div>
+    <script>
+      function DataCountdown() {
+        let today = new Date();
+        let nrMonths = 9 - (today.getMonth() + 1);
+        let nrYears = 2023 - today.getFullYear();
+        if (nrMonths < 0) {
+          nrYears -= 1;
+          nrMonths += 12;
+        }
+        let months = document.getElementById("months");
+        let years = document.getElementById("years");
+        if (nrMonths == 1) {
+          months.textContent = "1 месяц";
+        } else {
+          months.textContent = nrMonths + " месяцa";
+        }
+        if (nrYears == 1) {
+          years.textContent = "1 год";
+        } else {
+          years.textContent = nrYears + " года";
+        }
+      }
+    </script>
   </body>
 </html>
