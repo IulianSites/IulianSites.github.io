@@ -9,16 +9,14 @@ body {
   height: 100vh;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: fit-content;
 }
 
 #backgroundImage {
   display: block;
   filter: brightness(50%);
   height: 100vh;
-  left: 0;
   position: fixed;
-  top: 0;
   width: 100vw;
   z-index: -1;
 }
