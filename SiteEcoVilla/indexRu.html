@@ -116,7 +116,7 @@
         </div>
         <div id="section7" class="section">
           <div id="dataCountdown">
-            осталось <span id="years"></span> и
+            <span id="dataCountVerb"></span> <span id="years"></span>
             <span id="months"></span> до ввода в эксплуатацию.
           </div>
         </div>
@@ -148,17 +148,36 @@
           nrYears -= 1;
           nrMonths += 12;
         }
-        let months = document.getElementById("months");
-        let years = document.getElementById("years");
-        if (nrMonths == 1) {
-          months.textContent = "1 месяц";
+        if (!(nrMonths <= 0 && nrYears <= 0)) {
+          let months = document.getElementById("months");
+          let years = document.getElementById("years");
+          let dataCountVerb = document.getElementById("dataCountVerb");
+          if (nrYears == 1) {
+            years.textContent = "1 год";
+          } else if (nrYears <= 0) {
+          } else {
+            years.textContent = nrYears + " года";
+          }
+          if (
+            (nrMonths <= 0 && nrYears == 1) ||
+            (nrMonths == 1 && nrYears <= 0)
+          ) {
+            dataCountVerb.textContent = "остался";
+          } else {
+            dataCountVerb.textContent = "остались ";
+            if (nrMonths > 0 && nrYears > 0) {
+              years.textContent += " и ";
+            }
+          }
+          if (nrMonths == 1) {
+            months.textContent = "1 месяц";
+          } else if (nrMonths <= 0) {
+          } else {
+            months.textContent = nrMonths + " месяцa";
+          }
         } else {
-          months.textContent = nrMonths + " месяцa";
-        }
-        if (nrYears == 1) {
-          years.textContent = "1 год";
-        } else {
-          years.textContent = nrYears + " года";
+          let dataCountdown = document.getElementById("dataCountdown");
+          dataCountdown.style.display = "none";
         }
       }
     </script>

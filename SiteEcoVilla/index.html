@@ -115,7 +115,7 @@
         </div>
         <div id="section7" class="section">
           <div id="dataCountdown">
-            A mai rămas <span id="years"></span> și
+            <span id="dataCountVerb"></span> mai rămas <span id="years"></span>
             <span id="months"></span> până la darea în exploatare
           </div>
         </div>
@@ -147,17 +147,36 @@
           nrYears -= 1;
           nrMonths += 12;
         }
-        let months = document.getElementById("months");
-        let years = document.getElementById("years");
-        if (nrMonths == 1) {
-          months.textContent = "1 luna";
+        if (!(nrMonths <= 0 && nrYears <= 0)) {
+          let months = document.getElementById("months");
+          let years = document.getElementById("years");
+          let dataCountVerb = document.getElementById("dataCountVerb");
+          if (nrYears == 1) {
+            years.textContent = "1 an";
+          } else if (nrYears <= 0) {
+          } else {
+            years.textContent = nrYears + " ani";
+          }
+          if (
+            (nrMonths <= 0 && nrYears == 1) ||
+            (nrMonths == 1 && nrYears <= 0)
+            ) {
+            dataCountVerb.textContent = "A";
+          } else {
+            dataCountVerb.textContent = "Au ";
+            if (nrMonths > 0 && nrYears > 0) {
+              years.textContent += " și ";
+            }
+          }
+          if (nrMonths == 1) {
+            months.textContent = "1 luna";
+          } else if (nrMonths <= 0) {
+          } else {
+            months.textContent = nrMonths + " luni";
+          }
         } else {
-          months.textContent = nrMonths + " luni";
-        }
-        if (nrYears == 1) {
-          years.textContent = "1 an";
-        } else {
-          years.textContent = nrYears + " ani";
+          let dataCountdown = document.getElementById("dataCountdown");
+          dataCountdown.style.display = "none";
         }
       }
     </script>

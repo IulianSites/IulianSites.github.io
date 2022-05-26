@@ -115,8 +115,8 @@
         </div>
         <div id="section7" class="section">
           <div id="dataCountdown">
-            <span id="years"></span> and <span id="months"></span> are left till
-            putting into service
+            <span id="years"></span><span id="months"></span>
+            <span id="dataCountVerb"></span> left till putting into service
           </div>
         </div>
         <div id="BottomSection" class="section">
@@ -147,17 +147,36 @@
           nrYears -= 1;
           nrMonths += 12;
         }
-        let months = document.getElementById("months");
-        let years = document.getElementById("years");
-        if (nrMonths == 1) {
-          months.textContent = "1 month";
+        if (!(nrMonths <= 0 && nrYears <= 0)) {
+          let months = document.getElementById("months");
+          let years = document.getElementById("years");
+          let dataCountVerb = document.getElementById("dataCountVerb");
+          if (nrYears == 1) {
+            years.textContent = "1 year";
+          } else if (nrYears <= 0) {
+          } else {
+            years.textContent = nrYears + " years";
+          }
+          if (
+            (nrMonths <= 0 && nrYears == 1) ||
+            (nrMonths == 1 && nrYears <= 0)
+          ) {
+            dataCountVerb.textContent = "is";
+          } else {
+            dataCountVerb.textContent = "are ";
+            if (nrMonths > 0 && nrYears > 0) {
+              years.textContent += " and ";
+            }
+          }
+          if (nrMonths == 1) {
+            months.textContent = "1 month";
+          } else if (nrMonths <= 0) {
+          } else {
+            months.textContent = nrMonths + " months";
+          }
         } else {
-          months.textContent = nrMonths + " months";
-        }
-        if (nrYears == 1) {
-          years.textContent = "1 year";
-        } else {
-          years.textContent = nrYears + " years";
+          let dataCountdown = document.getElementById("dataCountdown");
+          dataCountdown.style.display = "none";
         }
       }
     </script>
