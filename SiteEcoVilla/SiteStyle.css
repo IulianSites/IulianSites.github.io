@@ -19,6 +19,7 @@ body {
   position: fixed;
   width: 100vw;
   z-index: -1;
+  object-fit: cover;
 }
 
 #pageHeaderBox {
