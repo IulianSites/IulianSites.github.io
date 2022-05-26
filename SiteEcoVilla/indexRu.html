@@ -148,7 +148,7 @@
           nrYears -= 1;
           nrMonths += 12;
         }
-        if (!(nrMonths <= 0 && nrYears <= 0)) {
+        if (!(nrMonths <= 0 && nrYears <= 0) || (nrYears<0)) {
           let months = document.getElementById("months");
           let years = document.getElementById("years");
           let dataCountVerb = document.getElementById("dataCountVerb");
