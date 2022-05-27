@@ -405,10 +405,10 @@ body {
 }
 
 #imageBox {
-  background-color: #e0e0d9;
+  background-color: #e0e0dd;
   height: fit-content;
   width: 100%;
-  box-shadow: 0 0 0.2cm 0.01cm rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0.4cm 0.005cm rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   user-select: none;
