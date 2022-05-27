@@ -304,7 +304,6 @@ body {
 #slideshowWindow {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
   display: none;
   height: 100vh;
   justify-content: center;
