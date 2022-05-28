@@ -279,13 +279,11 @@ body {
 #slideshowBox1 {
   height: calc(0.5625 * (18vw + 7cm));
   width: calc(18vw + 7cm);
-  filter: brightness(85%);
 }
 
 #slideshowBox2 {
   height: calc(0.5625 * (25vw + 9cm));
   width: calc(25vw + 9cm);
-  filter: brightness(85%);
 }
 
 .slides_box {
@@ -299,6 +297,7 @@ body {
   height: 100%;
   object-fit: contain;
   width: 100%;
+  filter: brightness(85%);
 }
 
 #slideshowWindow {
