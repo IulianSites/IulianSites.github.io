@@ -91,3 +91,15 @@ function CloseSlideshowWindow() {
   slideshowWindow.style.display = "none";
 }
 
+function mobileDetect() {
+  console.log(navigator.userAgent);
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    var lengthMultiplier = document.querySelector(":root");
+    lengthMultiplier.style.setProperty("--lengthMultiplier", 2);
+    console.log(lengthMultiplier);
+  }
+}

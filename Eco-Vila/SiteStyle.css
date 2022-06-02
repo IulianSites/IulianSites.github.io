@@ -1,3 +1,7 @@
+:root {
+  --lengthMultiplier: 1;
+}
+
 body {
   background: #fff;
   margin: 0;
@@ -51,7 +55,7 @@ body {
 #pageTitle {
   color: #fff;
   font-family: Verdana;
-  font-size: calc(1.4cm + 1.5vw);
+  font-size: calc((1.4cm + 1.5vw) * var(--lengthMultiplier));
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -59,7 +63,7 @@ body {
 #pageSubtitle {
   color: #fff;
   font-family: Verdana;
-  font-size: calc(0.5cm + 0.5vw);
+  font-size: calc((0.5cm + 0.5vw) * var(--lengthMultiplier));
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -150,7 +154,7 @@ body {
   width: calc(1.25cm + 1.25vw);
   height: 100%;
   color: #fff;
-  font-size: calc(0.4cm + 0.3vw);
+  font-size: calc((0.4cm + 0.3vw) * var(--lengthMultiplier));
   font-weight: 600;
   letter-spacing: 0.1em;
   text-align: center;
@@ -161,7 +165,7 @@ body {
   text-decoration: none;
 }
 
-.languageButton:hover{
+.languageButton:hover {
   background-color: #eee;
   color: #000;
 }
@@ -191,7 +195,7 @@ body {
 .text_box_formal {
   color: #000;
   font-family: "Open Sans";
-  font-size: calc(0.55cm + 0.4vw);
+  font-size: calc((0.55cm + 0.4vw) * var(--lengthMultiplier));
   font-weight: 500;
   letter-spacing: 0.007em;
   line-height: 1.5em;
@@ -201,7 +205,7 @@ body {
 
 .text_box_casual {
   font-family: Verdana;
-  font-size: calc(0.55cm + 0.4vw);
+  font-size: calc((0.55cm + 0.4vw) * var(--lengthMultiplier));
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.5em;
@@ -210,13 +214,13 @@ body {
 }
 
 .text_box_formal .title {
-  font-size: calc(1cm + 0.7vw);
+  font-size: calc((1cm + 0.7vw) * var(--lengthMultiplier));
   font-weight: 700;
   letter-spacing: 0.004em;
 }
 
 .text_box_casual .title {
-  font-size: calc(0.8cm + 0.6vw);
+  font-size: calc((0.8cm + 0.6vw) * var(--lengthMultiplier));
   font-weight: 600;
 }
 
@@ -227,7 +231,7 @@ body {
 }
 
 #textBox3 {
-  font-size: calc(0.5cm + 0.4vw);
+  font-size: calc((0.5cm + 0.4vw) * var(--lengthMultiplier));
   color: #fff;
   width: calc(9vw + 9cm);
   text-align: left;
@@ -244,7 +248,7 @@ body {
 #contacts .title {
   color: #fff;
   font-family: "Open Sans";
-  font-size: calc(1cm + 0.7vw);
+  font-size: calc((1cm + 0.7vw) * var(--lengthMultiplier));
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.5em;
@@ -258,7 +262,7 @@ body {
   text-align: left;
   color: #fff;
   font-family: "Open Sans";
-  font-size: calc(0.42cm + 0.32vw);
+  font-size: calc((0.42cm + 0.32vw) * var(--lengthMultiplier));
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.7em;
@@ -326,7 +330,7 @@ body {
   color: #fff;
   cursor: pointer;
   display: flex;
-  font-size: calc(1cm + 1vw);
+  font-size: calc((1cm + 1vw) * var(--lengthMultiplier));
   font-weight: 700;
   height: 100%;
   transition: 0.2s ease;
@@ -369,7 +373,7 @@ body {
   cursor: pointer;
   display: flex;
   font-family: Arial;
-  font-size: calc(0.8cm + 0.8vw);
+  font-size: calc((0.8cm + 0.8vw) * var(--lengthMultiplier));
   font-weight: 100;
   height: calc(0.8cm + 0.8vw);
   justify-content: center;
@@ -440,7 +444,7 @@ body {
   letter-spacing: 0.01em;
   height: fit-content;
   padding: 1em;
-  font-size: calc(0.8cm + 0.6vw);
+  font-size: calc((0.8cm + 0.6vw) * var(--lengthMultiplier));
   height: fit-content;
   font-weight: 600;
   line-height: 1.5em;
